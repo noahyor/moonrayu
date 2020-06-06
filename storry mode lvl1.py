@@ -57,7 +57,7 @@ if not t[3] >= 7 and t[3] <= 19:
                 sleep(0.3)
     else:
         print('''wait a... you are not alloud in this program!
-        our hours are as follos:
-        8-10 o'clock (I do not know if it is am or pm or both!)''')
+        our hours are as follows:
+        mon-son: 8am-8pm''')
 else:
     print("test")
