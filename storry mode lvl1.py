@@ -61,6 +61,3 @@ if not t[3] >= 7 and t[3] <= 19:
         8-10 o'clock (I do not know if it is am or pm or both!)''')
 else:
     print("test")
-stuff = open("storry mode lvl1py.txt", "w")
-stuff.write(f"{name} {}")
-stuff.close()
