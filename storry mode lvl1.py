@@ -43,7 +43,7 @@ else:
     print(f"hmm... {name}... good name!")
     print("OK enough of that, let's start!") # TODO: tweak time limitation.
 t = localtime()
-if not t[3] >= 7 and t[3] <= 19:
+if not t.tm_hour >= 7 and t.tm_hour <= 19:
     sleep(5)
     if typeronof == "True" or "true":
         string = "wait a... you are not alloud in this program!\n"
