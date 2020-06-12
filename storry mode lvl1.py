@@ -1,6 +1,8 @@
 from time import sleep # imports the function "sleep()" (from time) witch takes a floting point intiger inside the paretheses as input and suspends the program for that amount of time in seconds.
 from time import localtime # imports the function "localtime()" witch prints (not on the screen) the current time in your time zone. see lines 25-27 for exampels.
+import simpleaudio as sa
 # empty line. I don't know why this is here
+
 typeronof = str(input('''typer on/off option 
 boolian valeues only
 True = on
@@ -45,7 +47,7 @@ else:
 t = localtime()
 if not t.tm_hour >= 7 and t.tm_hour <= 19:
     sleep(5)
-    if typeronof == "True" or "true":
+    if typeronof == "True" or typeronof == "true":
         string = "wait a... you are not alloud in this program!\n"
         caracternum = 0
         for letter in string:
@@ -60,4 +62,9 @@ if not t.tm_hour >= 7 and t.tm_hour <= 19:
         our hours are as follows:
         mon-son: 8am-8pm''')
 else:
-    print("test")
+    print("test", flush=True)
+    sleep(1)
+    filename = 'new_level16.wav'
+    wave_obj = sa.WaveObject.from_wave_file(filename)
+    play_obj = wave_obj.play()
+    play_obj.wait_done()  # Waits until sound has finished playing
